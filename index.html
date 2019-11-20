@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="Rafael Bourscheid da Silveira desenvolvedor web front frontend seo freela freelance freelancer programador sites html css" />
 	<meta name="description" content="Opa, tudo certo? Eu desenvolvo sites.">
-	<meta name="theme-color" content="#ffffff"> <!-- Muda a cor do cabeçalho (relógio, bateria, url, ...) no mobile, por enquanto só no chrome para android. Mudar de acordo com a cor do header! -->
+	<meta name="theme-color" content="#000000"> <!-- Muda a cor do cabeçalho (relógio, bateria, url, ...) no mobile, por enquanto só no chrome para android. Mudar de acordo com a cor do header! -->
 
 
 	<!-- opengraph (facebook, linkedin, whatsapp) -->
@@ -23,7 +23,7 @@
 	<meta property="og:title" content="Rafael Silveira | Desenvolvedor web freelance" />
 	<meta property="og:url" content="http://www.bsrafael.github.io" />
 	<meta property="og:site_name" content="Rafael Silveira | Desenvolvedor web freelance" />
-	<meta property="og:image" content="http://www.bsrafael.github.io/img/avatar.png" />
+	<meta property="og:image" content="http://www.bsrafael.github.io/img/eu.jpg" />
 	<meta property="og:description" content="Opa, tudo certo? Eu desenvolvo sites.">
 
 	<!-- twitter -->
@@ -31,7 +31,7 @@
 	<meta name="twitter:title" content="Rafael Silveira | Desenvolvedor web freelance" />
 	<meta name="twitter:description" content="Opa, tudo certo? Eu desenvolvo sites." />
 	<meta name="twitter:url" content="http://www.bsrafael.github.io" />
-	<meta name="twitter:image" content="http://www.bsrafael.github.io/img/avatar.png">
+	<meta name="twitter:image" content="http://www.bsrafael.github.io/img/eu.jpg">
 
 	<!-- fontes: google ou https://transfonter.org/ (gera os @import)-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,700|Lato:300i,700,900i&display=swap" rel="stylesheet">
@@ -47,13 +47,13 @@
 
 	<header>
 		<nav class="flexmenu">
-			<a class="me" onclick="navTo('home')">
+			<div class="me">
 				<img src="img/eu.jpg" alt="Rafael Bourscheid da Silveira" class="me__picture">
 				<div class="me__content">
 					<h1 class="me__name">Rafael Bourscheid da Silveira</h1>
 					<p class="me__info">Opa, beleza? <br/>Como posso te ajudar?</p>
 				</div>
-			</a>
+			</div>
 			<div class="main-menu">
 				<a onclick="navTo('cases')" class="menu-item active">Cases</a>
 				<a onclick="navTo('skills')" class="menu-item">Skills</a>
@@ -70,6 +70,8 @@
 				<a href="mailto:rafaelbs159@gmail.com" class="social"><i class="fas fa-envelope"></i></a>
 			</div>
 		</nav>
+
+		<button id="menu-toggle" title="Abrir menu" onclick="toggleMenu()"><span></span></button>
 		
 	</header>
 
@@ -102,7 +104,7 @@
 
 				<a href="https://duo.studio/" target="_blank" class="case grid-item">
 					<div class="grid-item__picture">
-						<img src="https://www.catalogomelhor.com.br/img/avatar.png" alt="Catálogo Melhor para Você">
+						<img src="https://www.catalogomelhor.com.br/img/eu.jpg" alt="Catálogo Melhor para Você">
 					</div>
 					<div class="grid-item__content">
 						<h3 class="grid-item__title">Catálogo Melhor Para Você</h3>
@@ -148,7 +150,7 @@
 
 				<a href="http://converte.digital/" class="case grid-item">
 					<div class="grid-item__picture">
-						<img src="http://converte.digital/img/avatar.png" alt="Converte Digital">
+						<img src="http://converte.digital/img/eu.jpg" alt="Converte Digital">
 					</div>
 					<div class="grid-item__content">
 						<h3 class="grid-item__title">Converte Digital</h3>
@@ -163,7 +165,7 @@
 
 				<a href="https://supercarros.cc" class="case grid-item">
 					<div class="grid-item__picture">
-						<img src="https://supercarros.cc/img/avatar.png" alt="Super Carros">
+						<img src="https://supercarros.cc/img/eu.jpg" alt="Super Carros">
 					</div>
 					<div class="grid-item__content">
 						<h3 class="grid-item__title">Super Carros</h3>
@@ -241,29 +243,8 @@
 		</a>
 	</footer>
 
-	<script type="text/javascript" src="js/jquery.mask.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
-	<script>
-		var navigating = false;
-		function navTo(target) {
-			if ( navigating || $(event.target).hasClass('active') ) {
-				return
-			} 
-			navigating = true;
-			$('.menu-item').removeClass('active');
-			$(event.target).addClass('active');
-			$('.content-tab').fadeOut(function(){
-				$('#' + target).fadeIn(function(){
-					navigating = false;
-				})
-			})
-
-
-
-		}
-	
-	</script>
 
 
 </body>

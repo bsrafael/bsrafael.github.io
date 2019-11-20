@@ -25,6 +25,8 @@ body {color: #2B2B2B; background: #FFFFFF; font-weight:300; letter-spacing: 0px;
 img {max-width: 100%;height: auto;}
 .hidden-desktop{display: none!important;}
 
+#menu-toggle{display: none}
+
 /** Evita que o font-awesome trave o carregamento da página */
 html.fa-events-icons-loading .fa-fw {display: inline-block;width: 1.28571429em;}
 html.fa-events-icons-loading .fa-fw::before {content: "\00a0";}
@@ -46,7 +48,7 @@ main{width: calc(100% - 20rem); height: 100%; overflow-y: scroll;}
 
 .main-menu {margin: auto; display: flex; flex-direction: column;align-items: center;justify-content: center;}
 .menu-item {color: #7c7c7c; font-size: 1.25rem;margin: 0.5em; position: relative;}
-.menu-item::before {content:''; width: 0; height: 2px; background: #000; position: absolute; left: -0.5em; top: calc(50% - 1px);}
+.menu-item::before {content:''; width: 0; height: 2px; background: #000; position: absolute; left: -0.5em; top: calc(50% - 1px); transition: all 0.5s ease;}
 .menu-item.active{color:#000}
 .menu-item.active::before {width: 1em; left: -1.5em;}
 .menu-item:hover{color:#000}
@@ -54,6 +56,7 @@ main{width: calc(100% - 20rem); height: 100%; overflow-y: scroll;}
 .socials {display: flex; align-items: center;}
 .social {margin: 0 0.5rem;}
 .social i{font-size: 1.25rem; color: #7c7c7c}
+.social:hover i{color: #000}
 
 
 .floating-btns {position: fixed; bottom: 1.5rem; right: 1.5rem;}
@@ -74,7 +77,7 @@ main{width: calc(100% - 20rem); height: 100%; overflow-y: scroll;}
 
 
 .content-bg{background: #f0f0f0;}
-.content-tab {padding: 2rem}
+.content-tab {padding: 2rem 2rem 4.5rem}
 
 .title {font-size: 3.5rem; line-height: 0.85em; font-family: 'Lato', sans-serif; font-weight: 900; text-align: center; margin-bottom: 2rem; position: relative; color: #000; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #000; text-transform: uppercase; font-style: italic; letter-spacing: 0.4em;}
 
@@ -110,11 +113,63 @@ main{width: calc(100% - 20rem); height: 100%; overflow-y: scroll;}
 
 /*** Skills ***/
 .resume {display: grid; gap: 2rem}
-
 .resume-item {background: #fff; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.15);}
-
 .subtitle {font-size: 2.5rem; margin-bottom: 0.5em; color: #000; font-weight: 300; font-style: italic; font-family: 'Lato', sans-serif;}
 .text {font-size: 1.15rem; line-height: 1.73em; ;}
 .text ul, .text ol { padding-left: 2rem; border-left: 2px solid #000;}
 .text ul li { list-style: disc;}
 .text ol li {list-style: decimal;}
+
+
+@media only screen and (max-width: 1200px) {
+    header.active #menu-toggle{box-shadow: 0 2px 5px rgba(0,0,0,0.15);}
+    #menu-toggle{display: block;padding: 1rem;position: fixed;top: 1rem;right: 1.5rem;z-index: 1000;background:#fff;}
+    #menu-toggle span{border-top: 2px solid #000; border-bottom: 2px solid #000; display: block; width: 1.5rem; height: 1.5rem;transition: border-color 0.5s ease;}
+    #menu-toggle span::before, #menu-toggle span::after{content: ''; width: calc(100% - 1rem); height: 2px; background: #000; position: absolute; top: calc(50% - 1px); left: 0.5rem; transition: transform 0.5s ease;}
+    #menu-toggle.active span{border-color: transparent;}
+    #menu-toggle.active span::before{transform: rotate(45deg);}
+    #menu-toggle.active span::after{transform: rotate(-45deg);}
+    body{flex-direction: column;}
+    header{padding: 1.5rem; width: 100%;}
+    main{width: 100%; height: auto; overflow: initial;}
+
+    .me{display: flex;align-items: center;justify-content: flex-start;text-align: left;}
+    .me__picture{margin: 0 0.75rem 0 0; width: 2.5rem; height: 2.5rem}
+    .me__name{font-size: 1.15rem; margin-bottom: 0;}
+    .me__info{font-size: 1rem;}
+    .me__info br{display: none;}
+    .flexmenu{position: fixed; top: 0; right: 0; width: 17.5rem; max-width: 85%; z-index: 100; background: #fff;}
+    .content-tab{padding: 1.5rem 1.5rem 4.5rem}
+    .resume, .grid{gap: 1.5rem}
+
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .grid{grid-template-columns: 1fr;}
+    .grid-item__content, .grid-item.first .grid-item__content{padding: 1rem}
+    .grid-item__picture, .grid-item.first .grid-item__picture{width: 33%}
+    .grid-item__title, .grid-item.first .grid-item__title{font-size: 1.15rem;}
+    .grid-item__text, .grid-item.first .grid-item__text{font-size: 0.85rem;}
+}
+
+@media only screen and (max-width: 576px) {
+    header{padding: 1rem}
+    #menu-toggle{top: 0; right: 0;}
+    .grid-item{flex-direction: column;}
+    .grid-item__content, .grid-item__picture{width: 100% !important;}
+    .grid-item__title, .grid-item.first .grid-item__title{font-size: 1.25rem;}
+    .grid-item__text, .grid-item.first .grid-item__text{font-size: 1rem;}
+    
+    
+    .me{flex-direction: column;}
+    .me__picture{margin-right: 0; margin-bottom: 0.5rem; width: 3rem; height: 3rem}
+    .me__info{font-size: 0.9375rem; text-align: center;}
+    .title{font-size: 2.5rem; margin-bottom: 1rem;}
+    .subtitle{font-size: 1.5rem;}
+    .resume-item{padding: 1rem}
+
+    .content-tab{padding: 1rem 1rem 4.5rem}
+
+    .text{font-size: 1rem}
+}
