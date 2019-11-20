@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+
+	<title>Rafael Silveira | Desenvolvedor web freelance</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Rafael Bourscheid da Silveira desenvolvedor web front frontend seo freela freelance freelancer programador sites html css" />
+	<meta name="description" content="Opa, tudo certo? Eu desenvolvo sites.">
+	<meta name="theme-color" content="#ffffff"> <!-- Muda a cor do cabeçalho (relógio, bateria, url, ...) no mobile, por enquanto só no chrome para android. Mudar de acordo com a cor do header! -->
+
+
+	<!-- opengraph (facebook, linkedin, whatsapp) -->
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Rafael Silveira | Desenvolvedor web freelance" />
+	<meta property="og:url" content="http://www.bsrafael.github.io" />
+	<meta property="og:site_name" content="Rafael Silveira | Desenvolvedor web freelance" />
+	<meta property="og:image" content="http://www.bsrafael.github.io/img/avatar.png" />
+	<meta property="og:description" content="Opa, tudo certo? Eu desenvolvo sites.">
+
+	<!-- twitter -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- padrão -->
+	<meta name="twitter:title" content="Rafael Silveira | Desenvolvedor web freelance" />
+	<meta name="twitter:description" content="Opa, tudo certo? Eu desenvolvo sites." />
+	<meta name="twitter:url" content="http://www.bsrafael.github.io" />
+	<meta name="twitter:image" content="http://www.bsrafael.github.io/img/avatar.png">
+
+	<!-- fontes: google ou https://transfonter.org/ (gera os @import)-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,700|Lato:300i,700,900i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<header>
+		<nav class="flexmenu">
+			<a class="me" onclick="navTo('home')">
+				<img src="img/eu.jpg" alt="Rafael Bourscheid da Silveira" class="me__picture">
+				<div class="me__content">
+					<h1 class="me__name">Rafael Bourscheid da Silveira</h1>
+					<p class="me__info">Opa, beleza? <br/>Como posso te ajudar?</p>
+				</div>
+			</a>
+			<div class="main-menu">
+				<a onclick="navTo('cases')" class="menu-item active">Cases</a>
+				<a onclick="navTo('skills')" class="menu-item">Skills</a>
+				<!-- <a onclick="navTo('blog')" class="menu-item">Blog</a> -->
+				<!-- <a onclick="navTo('calculadora')" class="menu-item">Simule seu job</a> -->
+				<!-- <a onclick="navTo('contato')" class="menu-item">Fale comigo</a> -->
+				<a href="https://wa.me/5554996830505?text=Olá%20Rafa,%20acessei%20seu%20site%20e..." target="_blank" class="menu-item">WhatsApp</a>
+				<a href="mailto:rafaelbs159@gmail.com" target="_blank" class="menu-item">E-mail</a>
+			</div>
+			<div class="socials">
+				<a href="https://github.com/bsrafael/" target="_blank" rel="noopener noreferrer" class="social"><i class="fab fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/bsrafael/" target="_blank" rel="noopener noreferrer" class="social"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://wa.me/5554996830505?text=Olá%20Rafa,%20acessei%20seu%20site%20e..." target="_blank" rel="noopener noreferrer" class="social"><i class="fab fa-whatsapp"></i></a>
+				<a href="mailto:rafaelbs159@gmail.com" class="social"><i class="fas fa-envelope"></i></a>
+			</div>
+		</nav>
+		
+	</header>
+
+
+	<main class="content-bg">
+
+		<section id="cases" class="content-tab cases active">
+			<h2 class="title">Cases</h2>
+			<!-- <div class="filters">
+				<button class="filter active">Todos</button>
+				<button class="filter">Sites institucionais</button>
+				<button class="filter">eCommerce</button>
+				<button class="filter">Blogs</button>
+			</div> -->
+			<div class="grid">
+				<a href="https://duo.studio/" target="_blank" class="case grid-item first">
+					<div class="grid-item__picture">
+						<img src="https://duo.studio/img/avatar.jpg" alt="Duo Studio">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">duo.studio</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> duo.studio</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> Agência digital 360º certificada GPTW e parceira Diamond da RD</p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS, PHP) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://duo.studio/" target="_blank" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="https://www.catalogomelhor.com.br/img/avatar.png" alt="Catálogo Melhor para Você">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">Catálogo Melhor Para Você</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> catalogomelhor.com.br/</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> Catálogo de vendas diretas da família Golfran</p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS, PHP) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+
+				
+				<a href="http://coopsantaclara.com.br/" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="http://coopsantaclara.com.br/img/avatar.jpg" alt="Cooperativa Santa Clara">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">Cooperativa Santa Clara</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> coopsantaclara.com.br</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> O site da cooperativa foi todo refeito, com foco em usabilidade. </p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+				
+				<a href="https://sicredipioneira.com.br" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="https://sicredipioneira.com.br/img/avatar.jpg" alt="Sicredi Pioneira">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">Sicredi Pioneira</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> sicredipioneira.com.br</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> A Sicredi Pioneira é a divisão da Sicredi que atende a Serra Gaúcha. </p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+
+				<a href="http://converte.digital/" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="http://converte.digital/img/avatar.png" alt="Converte Digital">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">Converte Digital</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> converte.digital</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> A primeira escola de e-commerce da Serra Gaúcha. </p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://supercarros.cc" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="https://supercarros.cc/img/avatar.png" alt="Super Carros">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">Super Carros</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> supercarros.cc</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> Museu moderno com carros esportivos, de luxo e de corrida. </p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (HTML, CSS, JS) </p>
+							<p class="text__item"><i class="fas fa-map-pin"></i> <small>Collabs @ duo.studio</small></p>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://github.com/bsrafael/Picstone" class="case grid-item">
+					<div class="grid-item__picture">
+						<img src="img/picstone.jpg" alt="Picstone">
+					</div>
+					<div class="grid-item__content">
+						<h3 class="grid-item__title">App Picstone</h3>
+						<div class="grid-item__text">
+							<p class="text__item"><i class="fas fa-globe"></i> não publicado</p>
+							<p class="text__item"><i class="far fa-comment-dots"></i> Deixe fotos únicas pelo mapa para outras pessoas encontrarem </p>
+							<p class="text__item"><i class="fas fa-code"></i> Front-end (Java, Android) </p>
+							<p class="text__item"><small>Inspirado nos Soapstones, do Dark Souls</small></p>
+						</div>
+					</div>
+				</a>
+				
+			</div>
+		</section>
+
+		<section id="skills" class="content-tab skills" style="display: none">
+			<h2 class="title">Skills</h2>
+
+			<div class="resume">
+				<div class="resume-item">
+					<h3 class="subtitle">Perfil</h3>
+					<div class="text">
+						Tenho 22 anos, consigo com facilidade aprender uma nova ferramenta por conta própria. Também gosto bastante de entender as dores e dificuldades das pessoas para auxiliá-las como for possível.
+					</div>
+				</div>
+
+				<div class="resume-item">
+					<h3 class="subtitle">Conhecimento</h3>
+					<div class="text">
+						<ul>
+							<li>Programação de projetos web a partir de especificação de layout, usando técnicas modernas de CSS3, HTML5, e Javascript;</li>
+							<li>Criação de e-mails marketing que não quebram;</li>
+							<li>Versionamento usando Git;</li>
+							<li>Aplicativos Android usando Java;</li>
+							<li>Processos de desenvolvimento e padrões de projeto de software;</li>
+							<li>Conhecimento intermediário em C# e SQL, básico em Python e PHP.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume-item">
+					<h3 class="subtitle">Graduação</h3>
+					<div class="text">
+						<strong>Ciência da Computação</strong><br/>
+						UCS - Universidade de Caxias do Sul<br/>
+						<small>Em andamento, conclusão em 2021</small>
+					</div>
+				</div>
+			</div>
+			
+
+		</section>
+
+
+	</main>
+
+	<footer class="floating-btns">
+		<a href="https://wa.me/5554996830505?text=Olá%20Rafa,%20acessei%20seu%20site%20e..." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp">
+			<i class="fab fa-whatsapp"></i>
+		</a>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.mask.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<script>
+		var navigating = false;
+		function navTo(target) {
+			if ( navigating || $(event.target).hasClass('active') ) {
+				return
+			} 
+			navigating = true;
+			$('.menu-item').removeClass('active');
+			$(event.target).addClass('active');
+			$('.content-tab').fadeOut(function(){
+				$('#' + target).fadeIn(function(){
+					navigating = false;
+				})
+			})
+
+
+
+		}
+	
+	</script>
+
+
+</body>
+</html>

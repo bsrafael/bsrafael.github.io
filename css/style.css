@@ -1,0 +1,120 @@
+/**
+** VSCode? Recomendada a extensão "Better Comments"
+** Cores do site:
+**   Azul: #50afc1
+**   Fontes: #2B2B2B;
+** */
+
+/**********************************************
+**          Reset
+** ********************************************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,hr,th,td {margin:0; padding:0;}
+h3,h4,h5,h6 {font-weight:700;}
+h1, h2 {font-weight:700;}
+small {font-style: italic; font-size: inherit; font-weight: 300; font-family: 'Lato', sans-serif;}
+html {-webkit-font-smoothing: antialiased;}
+html {font-size: 100%; font-family: 'Roboto', sans-serif} /** Colocar com a fonte do google que tiver */
+strong, b {font-weight:700;}
+* {box-sizing: border-box;}
+ul, ol{list-style: none;}
+a {text-decoration: none;}
+a, a:hover, a i, a:hover i, button, button:hover, button i, button:hover i{transition:all 0.5s ease;-moz-transition: all 0.5s ease;-webkit-transition: all 0.5s ease;-o-transition: all 0.5s ease;cursor: pointer;}
+input, textarea, button{outline: none;border: 0;padding: 0;background: transparent; font: inherit;}
+body {color: #2B2B2B; background: #FFFFFF; font-weight:300; letter-spacing: 0px;}
+.clear {width: 100%; clear: both; display: block; height: 0px;}
+img {max-width: 100%;height: auto;}
+.hidden-desktop{display: none!important;}
+
+/** Evita que o font-awesome trave o carregamento da página */
+html.fa-events-icons-loading .fa-fw {display: inline-block;width: 1.28571429em;}
+html.fa-events-icons-loading .fa-fw::before {content: "\00a0";}
+
+/** muda aquele azul quando o usuário seleciona texto */
+::selection{background: #50afc122}
+/******  End of Reset  *******/
+
+
+body{display: flex; height: 100vh;}
+header{width: 20rem; }
+.flexmenu{height: 100%; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.15), 0 5px 15px rgba(0,0,0,0.075); position: relative;}
+main{width: calc(100% - 20rem); height: 100%; overflow-y: scroll;}
+.me {position: relative; text-align: center;}
+.me__picture {width: 5rem; height: 5rem; object-fit: cover; object-position: center; border-radius: 50%; display: block; margin: 0 auto 0.75rem;}
+.me__content {}
+.me__name {font-family: 'Lato', sans-serif; font-size: 1.375rem; letter-spacing: -0.05em; margin-bottom: 0.5rem;}
+.me__info {font-family: 'Lato', sans-serif; font-size: 1.25rem; font-weight: 300; font-style: italic; color: #3c3c3c}
+
+.main-menu {margin: auto; display: flex; flex-direction: column;align-items: center;justify-content: center;}
+.menu-item {color: #7c7c7c; font-size: 1.25rem;margin: 0.5em; position: relative;}
+.menu-item::before {content:''; width: 0; height: 2px; background: #000; position: absolute; left: -0.5em; top: calc(50% - 1px);}
+.menu-item.active{color:#000}
+.menu-item.active::before {width: 1em; left: -1.5em;}
+.menu-item:hover{color:#000}
+
+.socials {display: flex; align-items: center;}
+.social {margin: 0 0.5rem;}
+.social i{font-size: 1.25rem; color: #7c7c7c}
+
+
+.floating-btns {position: fixed; bottom: 1.5rem; right: 1.5rem;}
+.floating-btn {width: 4rem; height: 4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center;}
+.floating-btn i{font-size: 2.5rem;}
+.floating-btn.whatsapp{background: #25D366; animation: bouncing 1s linear infinite alternate-reverse; box-shadow: 0 2px 4px rgba(0,0,0,0.15); }
+.floating-btn.whatsapp i{color: #fff; }
+.floating-btn:hover{filter: brightness(125%);}
+
+@keyframes bouncing {
+    from {
+        transform: translateY(-10%);
+    }
+    to {
+        transform: translateY(10%);
+    }
+}
+
+
+.content-bg{background: #f0f0f0;}
+.content-tab {padding: 2rem}
+
+.title {font-size: 3.5rem; line-height: 0.85em; font-family: 'Lato', sans-serif; font-weight: 900; text-align: center; margin-bottom: 2rem; position: relative; color: #000; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #000; text-transform: uppercase; font-style: italic; letter-spacing: 0.4em;}
+
+.filters {display: flex; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1rem;}
+.filter {font-size: 0.75rem; background: #7c7c7c; color: #fff; padding: 0.25em 0.5em; margin-right: 0.5rem;}
+.filter.active{background: #000; color: #fff;}
+.filter:hover{background:#3c3c3c}
+.grid {display: grid; grid-template-columns: 1fr 1fr; gap: 2rem}
+.case {}
+
+.grid-item {position: relative; display: flex; align-items: stretch; box-shadow: 0 2px 4px rgba(0,0,0,0.15);}
+.grid-item__picture {width: 45%; position: relative; overflow: hidden; flex-shrink: 0;}
+.grid-item__picture img{width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; transition: all 1s ease;}
+.grid-item__picture::after{content:''; width: 100%; display: block; padding-bottom: 100%;}
+.grid-item__content {padding: 1rem; background: #fff; height: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; position: relative; flex-grow: 1}
+.grid-item__title {font-size: 1.25rem; font-family: 'Lato', sans-serif; margin-bottom: 0.5em; color: #000; font-weight: 300;font-style: italic;}
+.grid-item__text {font-size: 0.85rem; color: #3c3c3c; line-height: 1.5em;}
+.text__item{display: flex; margin-bottom: 0.5em;}
+.text__item i{color: #000; width: 1.5em; text-align: center; margin-right: 0.25em; flex-shrink: 0; padding-top: 0.25em; color: #000;}
+
+.grid-item__content::before, .grid-item__content::after{content:''; position: absolute; right: 0; width: 0; height: 0; border-right: 2px solid #000; transition: all 0.5s ease; opacity: 0;}
+.grid-item__content::before{border-top: 2px solid #000; top: 0;}
+.grid-item__content::after{border-bottom: 2px solid #000; bottom: 0;}
+.grid-item:hover .grid-item__content::before, .grid-item:hover .grid-item__content::after{width: 2rem; height: 2rem; opacity: 1;}
+.grid-item:hover .grid-item__picture img{transform: scale(1.1);}
+
+.grid-item.first{grid-column: 1 / -1;}
+.grid-item.first .grid-item__picture{width: 35%}
+.grid-item.first .grid-item__content{padding: 2rem;}
+.grid-item.first .grid-item__title{font-size: 2.5rem}
+.grid-item.first .grid-item__text{font-size: 1.5rem}
+
+
+/*** Skills ***/
+.resume {display: grid; gap: 2rem}
+
+.resume-item {background: #fff; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.15);}
+
+.subtitle {font-size: 2.5rem; margin-bottom: 0.5em; color: #000; font-weight: 300; font-style: italic; font-family: 'Lato', sans-serif;}
+.text {font-size: 1.15rem; line-height: 1.73em; ;}
+.text ul, .text ol { padding-left: 2rem; border-left: 2px solid #000;}
+.text ul li { list-style: disc;}
+.text ol li {list-style: decimal;}
